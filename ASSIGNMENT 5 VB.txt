@@ -1,0 +1,53 @@
+Module Module1
+
+    Sub Main()
+        Dim str1 As String
+        Dim charB As Char
+        Dim Acounter, Ecounter, Icounter, Ocounter, Ucounter, B As Integer
+
+        str1 = " "
+        charB = " "
+        Acounter = 0
+        Ecounter = 0
+        Icounter = 0
+        Ocounter = 0
+        Ucounter = 0
+        B = 0
+
+        Console.Write("Enter your string: ")
+        str1 = Console.ReadLine()
+
+        For B = 1 To Len(str1)
+            charB = Mid(str1, B, 1)
+            charB = UCase(charB)
+
+            If charB = "A" Then
+                Acounter = Acounter + 1
+
+            ElseIf charB = "E" Then
+                Ecounter = Ecounter + 1
+
+            ElseIf charB = "I" Then
+                Icounter = Icounter + 1
+
+            ElseIf charB = "O" Then
+                Ocounter = Ocounter + 1
+
+            ElseIf charB = "U" Then
+                Ucounter = Ucounter + 1
+
+            End If
+        Next
+
+        Console.WriteLine("The number of A's in your string are:  " & Acounter)
+        Console.WriteLine("The number of E's in your string are:  " & Ecounter)
+        Console.WriteLine("The number of I's in your string are:  " & Icounter)
+        Console.WriteLine("The number of O's in your string are:  " & Ocounter)
+        Console.WriteLine("The number of U's in your string are:  " & Ucounter)
+
+        Console.ReadKey()
+
+
+    End Sub
+
+End Module

@@ -1,0 +1,28 @@
+ DECLARE s, Fstr : String
+        DECLARE CharacterA, SCharacter : Character
+        s = ""
+        Fstr = ""
+        CharacterA = ""
+        SCharacter = ""
+
+
+        OUTPUT("Please enter your string: ")
+        s = Input
+        CharacterA = Left(s, 1)
+        Fstr = Fstr & CharacterA
+
+        For C = 2 To Len(s)
+            SCharacter = Mid(s, C, 1)
+
+            If SCharacter = CharacterA Then
+                SCharacter = "*"
+                Fstr = Fstr & SCharacter
+
+
+            Else
+                Fstr = Fstr & SCharacter
+
+            End if
+        Next
+
+        OUTPUT("Your final string is: " & Fstr)

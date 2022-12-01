@@ -1,0 +1,20 @@
+DECLARE s, str1, str2, str3 : String
+        s = ""
+        str1 = ""
+        str2 = ""
+        str3 = ""
+
+        OUTPUT("Please enter your string: ")
+        s = Input
+
+        If Len(s) > 2 Then
+            str1 = Left(s, 2)
+            str2 = Right(s, 2)
+            str3 = str1 & str2
+            OUTPUTLine("Your final string is: " & str3)
+            Input
+
+        Else
+            OUTPUT("Your final string is: " & s)
+            Input
+            End

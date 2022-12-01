@@ -1,0 +1,35 @@
+Module Module1
+
+    Sub Main()
+        Dim s, Fstr As String
+        Dim charA, Schar As Char
+        s = " "
+        Fstr = " "
+        charA = " "
+        Schar = " "
+
+
+        Console.Write("Please enter your string: ")
+        s = Console.ReadLine()
+        charA = Left(s, 1)
+        Fstr = Fstr & charA
+
+        For C = 2 To Len(s)
+            Schar = Mid(s, C, 1)
+
+            If Schar = charA Then
+                Schar = "*"
+                Fstr = Fstr & Schar
+
+
+            Else
+                Fstr = Fstr & Schar
+
+            End If
+        Next
+
+        Console.WriteLine("Your final string is: " & Fstr)
+        Console.ReadKey()
+    End Sub
+
+End Module

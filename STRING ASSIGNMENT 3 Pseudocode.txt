@@ -1,0 +1,48 @@
+DECLARE str : String
+        DECLARE nofCharacter, nofalpha, nofdigits, nofotherCharacter, D, E : Integer
+        DECLARE CharacterA, CharacterB, CharacterC : Character
+        Str = ""
+        nofCharacter = 0
+        nofalpha = 0
+        nofdigits = 0
+        nofotherCharacter = 0
+        CharacterA = ""
+        CharacterB = ""
+        CharacterC = ""
+        D = 0
+        E = 0
+
+        OUTPUT("Enter your string: ")
+        Str = Input
+        OUTPUT("Enter the Characteracter in your string for which the count is to be known: ")
+        CharacterA = Input
+        For D = 1 To Len(Str)
+            CharacterB = Mid(Str, D, 1)
+            If CharacterA = CharacterB Then
+                nofCharacter = nofCharacter + 1
+            End If
+        Next
+        For E = 1 To Len(Str)
+            CharacterC = Mid(Str, E, 1)
+
+            If CharacterC >= "A" And CharacterC <= "Z" Or CharacterC >= "a" And CharacterC <= "z" Then
+                nofalpha = nofalpha + 1
+
+            ElseIf CharacterC >= "0" And CharacterC <= "9" Then
+                nofdigits = nofdigits + 1
+
+            Else
+                nofotherCharacter = nofotherCharacter + 1
+            End If
+        Next
+
+        OUTPUT("The seleted Characteracter count is: " & nofCharacter)
+
+        OUTPUT("Number of other Characteracters are: " & nofotherCharacter)
+
+        OUTPUT("Number of digits are: " & nofdigits)
+
+        OUTPUT("Number of alphabets are: " & nofalpha)
+
+
+

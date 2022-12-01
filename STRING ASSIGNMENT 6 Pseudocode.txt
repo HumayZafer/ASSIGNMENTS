@@ -1,0 +1,13 @@
+    DECLARE Donutcount : Integer
+        Donutcount = 0
+
+        OUTPUT("Welcome! Please enter the number of donuts you would like to purchase.")
+        Donutcount = Input
+
+        If Donutcount >= 10 Then
+            OUTPUT("Number of Donuts: Many")
+            Input
+        Else
+            OUTPUT("Number of Donuts: " & Donutcount)
+            Input
+        End 

@@ -1,0 +1,43 @@
+Module Module1
+
+    Sub Main()
+        Dim a, b, NewA, NewB, FA, FB, FinA, FinB, Finalstr As String
+        Dim charA, charB As Char
+        Dim C, D As Integer
+        a = " "
+        b = " "
+        NewA = ""
+        NewB = ""
+        FA = " "
+        FB = " "
+        FinA = " "
+        FinB = " "
+        Finalstr = " "
+        charA = " "
+        charB = " "
+        C = 0
+        D = 0
+
+        Console.Write("Enter your first string: ")
+        a = Console.ReadLine
+        Console.Write("Enter your second string: ")
+        b = Console.ReadLine
+
+        For C = 3 To Len(a)
+            charA = Mid(a, C, 1)
+            NewA = NewA & charA
+        Next
+        FB = Left(b, 2)
+        FinA = FB & NewA
+        For D = 3 To Len(b)
+            charB = Mid(b, D, 1)
+            NewB = NewB & charB
+        Next
+        FA = Left(a, 2)
+        FinB = FA & NewB
+        Finalstr = FinA & " " & FinB
+        Console.WriteLine("Your final string is: " & Finalstr)
+        Console.ReadKey()
+    End Sub
+
+End Module

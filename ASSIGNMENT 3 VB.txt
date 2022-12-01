@@ -1,0 +1,55 @@
+Module Module1
+
+    Sub Main()
+        Dim str As String
+        Dim nofchar, nofalpha, nofdigits, nofotherchar, D, E As Integer
+        Dim charA, charB, charC As Char
+        str = ""
+        nofchar = 0
+        nofalpha = 0
+        nofdigits = 0
+        nofotherchar = 0
+        charA = ""
+        charB = ""
+        charC = ""
+        D = 0
+        E = 0
+
+        Console.Write("Enter your string: ")
+        str = Console.ReadLine
+        Console.Write("Enter the character in your string for which the count is to be known: ")
+        charA = Console.ReadLine
+        For D = 1 To Len(str)
+            charB = Mid(str, D, 1)
+            If charA = charB Then
+                nofchar = nofchar + 1
+            End If
+        Next
+        For E = 1 To Len(str)
+            charC = Mid(str, E, 1)
+
+            If charC >= "A" And charC <= "Z" Or charC >= "a" And charC <= "z" Then
+                nofalpha = nofalpha + 1
+
+            ElseIf charC >= "0" And charC <= "9" Then
+                nofdigits = nofdigits + 1
+
+            Else
+                nofotherchar = nofotherchar + 1
+            End If
+        Next
+
+        Console.WriteLine("The seleted character count is: " & nofchar)
+
+        Console.WriteLine("Number of other characters are: " & nofotherchar)
+
+        Console.WriteLine("Number of digits are: " & nofdigits)
+
+        Console.WriteLine("Number of alphabets are: " & nofalpha)
+
+
+
+
+    End Sub
+
+End Module

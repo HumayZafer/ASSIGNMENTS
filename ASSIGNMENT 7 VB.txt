@@ -1,0 +1,27 @@
+Module Module1
+
+    Sub Main()
+        Dim s, str1, str2, str3 As String
+        s = " "
+        str1 = " "
+        str2 = " "
+        str3 = " "
+
+        Console.Write("Please enter your string: ")
+        s = Console.ReadLine
+
+        If Len(s) > 2 Then
+            str1 = Left(s, 2)
+            str2 = Right(s, 2)
+            str3 = str1 & str2
+            Console.WriteLine("Your final string is: " & str3)
+            Console.ReadLine()
+
+        Else
+            Console.WriteLine("Your final string is: " & s)
+            Console.ReadLine()
+        End If
+        Console.ReadKey()
+    End Sub
+
+End Module

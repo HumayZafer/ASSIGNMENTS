@@ -1,0 +1,36 @@
+DECLARE a, b, NewA, NewB, FA, FB, FinA, FinB, Finalstr : String
+        DECLARE CharacterA, CharacterB : Character
+        DECLARE C, D : Integer
+        a = " "
+        b = " "
+        NewA = ""
+        NewB = ""
+        FA = " "
+        FB = " "
+        FinA = " "
+        FinB = " "
+        Finalstr = " "
+        CharacterA = " "
+        CharacterB = " "
+        C = 0
+        D = 0
+
+        OUTPUT("Enter your first string: ")
+        a = Input
+        OUTPUT("Enter your second string: ")
+        b = Input
+
+        For C = 3 To Len(a)
+            CharacterA = Mid(a, C, 1)
+            NewA = NewA & CharacterA
+        Next
+        FB = Left(b, 2)
+        FinA = FB & NewA
+        For D = 3 To Len(b)
+            CharacterB = Mid(b, D, 1)
+            NewB = NewB & CharacterB
+        Next
+        FA = Left(a, 2)
+        FinB = FA & NewB
+        Finalstr = FinA & " " & FinB
+        OUTPUT("Your final string is: " & Finalstr)

@@ -1,0 +1,21 @@
+DECLARE str1, str2, Fstr : String
+        str1 = " "
+        str2 = " "
+        Fstr = " "
+
+        OUTPUT(" Please enter a string: ")
+        str1 = Input()
+
+        If Len(str1) < 3 Then
+            OUTPUT("Your final string is: " & str1)
+        Else
+            str2 = Right(str1, 3)
+            If "ing" = str2 Then
+                Fstr = str1 & "ly"
+            Else
+                Fstr = str1 & "ing"
+
+            End If
+            OUTPUT("Your final string is: " & Fstr)
+
+            End
